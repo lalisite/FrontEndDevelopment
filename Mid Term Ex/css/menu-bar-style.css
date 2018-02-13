@@ -1,0 +1,33 @@
+.menubar{
+    direction: rtl;
+    display: inline;
+    padding : 0;    
+}
+
+.menubar > ul{     
+    list-style: none;
+    padding: 15px 0;
+    border: 1px solid;    
+}
+
+.menubar > ul > li{
+    /* margin-right: 10px; */
+    display: inline;     
+}
+
+.menubar > ul > li > a{    
+    text-decoration: none;
+    font-size: 14px;
+    /* padding: 10px; */
+    font-family: Arial;
+    display: inline-block;
+}
+
+.logo {    
+    float:right;
+    margin-top: 38px;       
+}
+
+.menu-item{
+    padding: 0 3px;    
+}

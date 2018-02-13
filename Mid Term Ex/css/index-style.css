@@ -1,0 +1,27 @@
+*{    
+    /* text-align: right; */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid; */
+}
+
+html{
+    height:100%;
+}
+
+nav{
+    margin: 0 20%;
+}
+
+/* class for elements that represent rows the row is essentially clearfix - the next element will start next row */
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* class for elements that reperesent column */
+.column{
+    float:left;
+}

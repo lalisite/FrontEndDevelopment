@@ -1,0 +1,16 @@
+
+nav > .search-bar{
+    display: inline-block;  
+    direction: ltr;
+    border: 1px solid; 
+    padding : 10px 0;  
+}
+
+nav > .search-bar > button{
+    width:19px;
+    height:19px;       
+}
+
+nav > .search-bar > button > img{  
+    border:0;
+}
