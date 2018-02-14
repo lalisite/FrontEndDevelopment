@@ -1,8 +1,31 @@
 
 main{
-    width: 100%;
-    padding: 0 20%;
-    padding-top: 5%;
+    width: 100%;        
     height: 100%;
+    padding: 0 20%;
+    padding-top: 20px;
+
 }
 
+.first-row{
+    float: left;
+    width: 200px;;
+    height: 300px;
+    border-bottom-right-radius: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* border: 1px solid; */        
+}
+
+#first-box{
+    background-image: url("../main-page-images/פזקר_-291_354410564000.jpg");        
+}
+
+#second-box{
+    background-image: url("../main-page-images/Picture-046410251500.jpg");
+    margin: 0 20px
+}
+
+#third-box{
+    background-image: url("../main-page-images/1908364606615453350.JPG");
+}
