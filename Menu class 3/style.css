@@ -1,0 +1,57 @@
+body{
+    direction: rtl;
+    text-align: right;
+    font-family: Arial;
+}
+
+nav> ul, .dropdown-content > ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav, .dropdown-content{
+    width: 150px;
+    background-color: #eee;
+    float:right;
+}
+
+nav > ul > li > a, .dropdown-content > ul >li >a{
+    color:black;
+    text-decoration: none;
+    font-size: 130%;
+    display: block;
+    padding: 10px;
+}
+
+nav> ul >li >a:hover{
+    background-color: #444;
+    color : white;
+}
+
+nav > ul > li >a.active, .dropdown-content > ul > li > a.active{
+    background-color: lightseagreen;
+    color:black;
+}
+
+ /*main{
+     direction: ltr;
+     text-align: left;
+ }*/
+
+ /* position the father of .dropdwon-content class so it can get th e absolute position*/
+ .dropdown{
+    position: relative;   
+ }
+
+ .dropdown-content{
+     display: none;
+     position: absolute;
+     right : 100%;
+     top : 0;
+     box-shadow: -5px 5px 10px 0px rgba(0,0,0,0.3);
+ }
+
+ .dropdown:hover > .dropdown-content{
+     display:block;
+ }

@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    direction: rtl;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+main,nav {    
+    height: 100%;
+    border-radius: 20px;    
+}
+
+main{
+    border : 3px solid dodgerblue;
+    position: fixed;
+    right:150px;   
+    width: calc(100% - 155px);
+    margin-right: 5px;    
+}
+
+nav{
+    position: fixed;
+    top:0;
+    right:0;    
+    width: 150px;    
+    background-color: dodgerblue;
+}
+
+.nav-link{
+    font-size: 24px;
+    display: block;
+    margin: 15px;    
+    text-decoration-line: none;
+    font-family: Arial;
+}
+
+a:hover.nav-link{
+    background-color: whitesmoke;
+    color : darkblue;
+    border-radius: 10px;
+}
+
+
+.detail-area{
+    margin:50px;
+
+}
+
+img{
+    width: 300px;
+    height: 200px;
+}
+

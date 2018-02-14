@@ -1,0 +1,48 @@
+input {
+    margin: 5px;
+    border-radius: 5px;
+    float: right;
+}
+
+label{
+    display: inline-block;
+    margin: 5px;
+}
+
+button{
+    float:right;
+}
+
+form{
+    border: 1px solid black;
+    width: 60%;
+}
+
+.clearfix::after{
+    content:"";
+    display: table;
+    clear: both;
+}
+
+.radio input{
+    float: none;
+}
+
+textarea{
+    display: block;
+}
+
+progress{
+    display: block;    
+}
+
+/* label{
+    display: inline-block;
+    width:30%;
+}
+
+input {
+    display: inline-block;
+    width:69%;
+} */
+

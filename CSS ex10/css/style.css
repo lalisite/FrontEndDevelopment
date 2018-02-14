@@ -1,0 +1,22 @@
+body{
+    background-color: lime;
+    direction: rtl;
+    text-align: right;
+}
+
+body > a[href*="zap"], body > ol > li:first-child{
+    font-size: 150%;
+}
+body > ol > li:first-child {
+    text-decoration: underline;
+}
+li.marked{
+    text-decoration: line-through;
+}
+#shopping-list{
+    border: dotted 5px white;
+}
+
+#shopping-list::before{
+    content: "שים לב: הרשימה כוללת מצרכים בסיסיים בלבד";
+}

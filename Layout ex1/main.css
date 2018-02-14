@@ -1,0 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
+main{
+    background-color:red;
+    width: 7.31in;
+    margin: auto;
+}

@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+}
+
+/*retains the block at the same place*/
+.static{
+    color:lime;
+    position: static;
+    /*top : 100px;*/
+}
+
+/* puts the block relative to the place it would be in the default order*/
+.relative{
+    color:lightblue;
+    background-color: coral;
+    position : relative;
+    top:50px;
+    left:50px;
+    /* puts the emelent in front of all other*/
+    z-index: 10;
+}
+
+/* puts the block at fixed position relative to the screen regardless to other elements and it remains there (like fixed footer)*/
+.fixed{
+    color:white;
+    background-color: blue;
+    position: fixed;
+    bottom: 0;
+    /*top:0;*/
+}
+
+/*puts the block relative to its closest father in the heirarchy that is positioned*/
+.absolute{
+    color: red;
+    position: absolute;
+}
+
+/* remains in its place but the difference with fixed is that when you scroll the poisiton changes*/
+.absolute-no-position-ancestor{
+    background-color: green;
+    position: absolute;
+    bottom: 0;
+    right:0;
+}
+
+.absolute-father{
+    width: 300px;
+    height: 500px;
+    background-color: whitesmoke;
+    border: 2px solid black;
+}
+
+.absolute-with-father{
+    background-color: bisque;
+    position :absolute;
+    bottom: 0px;
+    font-size: 20px;
+}
+
+div{
+    font-size: 24px;
+}
+
+.container{
+    width: 100px;
+    border: 1px solid black;
+    position: relative;
+}
+
+img {
+    width: 100%;
+}
+
+.corners{
+    position:absolute;
+}
+
+#img-upper-left{
+    background-color : blue;  
+    top:0;
+    left: 0;
+}
+#img-upper-right{    
+    background-color : red;    
+    top:0;
+    right:0;
+}
+
+#img-bottom-left{
+    background-color:    greenyellow; 
+    bottom: 0;
+    left:0;   
+}
+
+#img-bottom-right{
+    background-color:    purple;    
+    bottom: 0;
+    right: 0;
+}

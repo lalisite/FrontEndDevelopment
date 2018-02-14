@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+}
+
+/* the header is position fixed and got initialy maring of 50px
+because the header left the heirarchy the first element is nav
+but the header still inherits the margin given because it is
+body's son*/
+header{
+    position: fixed;
+    background-color: red;
+    width: 100%;
+    color:white;
+    /*padding : 20px;*/
+    /*line heigh can align the text vertically also*/
+    line-height: 50px;
+    text-align: center;
+    top:0;
+}
+
+nav{
+  margin-top: 50px;
+  background-color: blueviolet;  
+  text-align: center;
+}
+
+nav a{
+    color:white;
+    text-decoration: none;
+    font-size: 120%;
+    padding: 0 5px;
+}
+
+nav a:hover{
+    background-color: purple;
+}
+
+article{
+    /*border: 1px solid black;*/
+    width: 50%;
+    float:left;
+    padding: 5px;
+}
+
+article:first-child{
+    border-right: 3px solid black;
+}
+
+article > img{
+    width: 200px;
+    float:left;
+    margin:  5px;
+}
+
+/*main:after{
+    content: "";
+    overflow: hidden;
+    display: table;
+    clear: both;
+}*/
+
+footer{
+    background-color: gray;
+    text-align: center;
+    padding: 5px;
+}
+
+.clearfix::after{
+    content: "";
+    overflow: hidden;
+    display: table;
+    clear: both;
+}

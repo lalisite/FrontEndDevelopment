@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="form.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Html Forms</h1>
+    </header>
+    <main>
+        <form>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div class="personal-details clearfix">
+                    <label for="fname">First Name: </label>
+                    <input type="text" name="fname" id="fname" placeholder="Enter your first name" value="" maxlength="20" required="required"
+                    />
+                </div>
+                <div class="clearfix">
+                    <label for="lname">Last Name: </label>
+                    <input type="text" name="lname" id="lname" placeholder="Enter your last name" value="" maxlength="20" required="required"
+                    />
+                </div>
+
+                <div class="clearfix">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email address" value="" required="required" />
+                </div>
+
+                <div class="clearfix">
+                    <label for="pwd">Password: </label>
+                    <input type="password" name="pwd" id="pwd" placeholder="Enter your password" value="" maxlength="20" required="required"
+                    />
+                </div>
+
+                <div class="address clearfix">
+                    <label for="addr">Address: </label>
+                    <input type="text" name="addr" id="addr" placeholder="Enter your address" value="" />
+                </div>
+
+                <div class="clearfix">
+                    <label for="age">Age: </label>
+                    <input type="number" name="age" id="age" placeholder="Age" value="" max="120" min="0" />
+                </div>
+            </fieldset>
+
+            <div class="clearfix">
+                <label for="satis">Satisfaction: </label>
+                <input type="range" name="satis" id="satis" value="3" max="5" min="1" />
+            </div>
+
+            <div class="clearfix">
+                <label for="file">Select file: </label>
+                <input type="file" name="file" id="file" accept="image/*" multiple/>
+            </div>
+
+            <input type="hidden" name="timestamp" id="timestamp" value="221212231231" />
+
+            <div class="clearfix">
+                <label for="sport">Sport: </label>
+                <input type="checkbox" name="sport" id="sport" value="yes" />
+            </div>
+
+            <div class="radio clearfix">
+                Gender:
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="male" value="m" checked/>
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="female" value="f" />
+            </div>
+
+            <textarea name "bblabla" rows="8" cols="40">ffdgdgfd</textarea>
+            <progress value="5" max="10"> </progress>
+            <br>
+            <select name="hobby" multiple>
+                <optgroup label="Outside Hobbies">
+                    <option value="1">Sport</option>
+                    <option value="2">Drive</option>
+                </optgroup>
+                <optgroup label="Inside Hobbies">
+                    <option value="3">Photo</option>
+                    <option value="4">Music</option>
+                </optgroup>
+            </select>
+
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+}
+
+input:invalid{
+    background-color: rgb(248, 104, 104);
+}
+
+input:valid{
+    background-color: lightgreen;
+}
+
+body{
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 20px;
+    background-color: beige;
+}
+
+/* NAV design */
+nav> ul{
+    list-style: none;
+    padding: 10px;
+    margin: 0;    
+}
+
+nav{
+    width: 100%;
+    background-color: lightblue; 
+    border-radius: 8px;   
+}
+
+nav > ul > li {
+    display: inline;
+}
+
+nav > ul > li > a{
+    color:black;
+    text-decoration: none;
+    font-size: 130%;    
+    padding: 10px;    
+}
+
+nav> ul >li >a:hover{
+    background-color: #444;
+    color : white;
+}
+
+nav > ul > li >a.active{
+    background-color: lightseagreen;
+    color:black;
+    border-radius: 5px; 
+    border:1px solid gray;
+}
+
+/*MAIN design*/
+main{
+    margin: 5px;
+}
+
+form{
+    width: 40%;
+    margin: auto;
+    margin-top: 20px;    
+}
+
+fieldset{
+    background-color: lightblue;
+}
+
+.details{
+    margin: 5px 0;
+}
+
+.status-container{
+    float:left;
+    display: block;
+}
+
+.status-options{
+    float: right;
+    display: block;
+}
+
+
+.details > input{
+    display:block;
+    float: right;
+    border-radius: 5px;    
+    padding:5px;    
+    
+}
+
+.details > label{
+    display: block;
+    float:left;
+}
+
+.details > textarea{
+    display:block;
+    float: right;
+    border-radius: 5px;    
+    padding:5px;
+    width: 60%;
+}
+.form-submit{
+    float: right;
+    border-radius: 5px;
+    
+}
+
+.form-reset{
+    float: right;
+    border-radius: 5px;
+}
+
+.radio input{
+    float: none;
+}
+
+.hobby{
+    float: right;
+    width: 60%;
+}
+
+/*footer design*/
+footer{          
+    width: 100%;
+    bottom:0;    
+    text-align: center;    
+    background-color: #eee;   
+    display: block;    
+}
+
+.clearfix::after{
+    content:"";
+    display: table;
+    clear:both;
+}
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Basic Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">
+</head>
+
+<body class="body">
+    <header>
+        <h1>
+            Basic Details Page
+        </h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Sign In</a>
+            </li>
+            <li>
+                <a href="BasicDetails.html">Basic Details</a>
+            </li>
+            <li>
+                <a class="active" href="ExtendedDetails.html">Extended Details</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <form>
+            <fieldset>
+                <legend>Extended Details</legend>
+                <div class="details clearfix">
+                    <label for="self-img">Self Portrait:</label>
+                    <input type="file" name="self-img" id="self-img" value="" accept="image/*"/>
+                </div>
+                <div class="details clearfix">
+                    <label for="self-txt">About Myself:</label>
+                    <textarea rows="5" cols="10" placeholder="please enter some word about yourself">
+                        
+                    </textarea>
+                </div>
+                <br>
+                <button class="form-submit clearfix" type="submit">Submit</button>
+                <button class="form-reset clearfix" type="reset">Reset</button>
+            </fieldset>
+        </form>
+
+    </main>
+    <!-- <footer>
+        Sign In Page
+    </footer> -->
+</body>
+
+</html>

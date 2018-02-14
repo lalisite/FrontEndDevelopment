@@ -1,0 +1,12 @@
+.marked{
+    text-align: right;
+    direction: rtl;
+
+}
+h2 > .lnk-large{
+    letter-spacing: 20px;
+} 
+
+body > a[href*="market"]  {
+    word-spacing: 200px; 
+}

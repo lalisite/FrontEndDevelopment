@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Basic Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">
+</head>
+
+<body class="body">
+    <header>
+        <h1>
+            Basic Details Page
+        </h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Sign In</a>
+            </li>
+            <li>
+                <a class="active" href="BasicDetails.html">Basic Details</a>
+            </li>
+            <li>
+                <a href="ExtendedDetails.html">Extended Details</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <form>
+            <fieldset>
+                <legend>Basic Details</legend>
+                <div class="details clearfix">
+                    <label for="age">Age:</label>
+                    <input type="number" name="age" id="age" value="" min="0" max="120" required="required" />
+                </div>
+                <!--<div class="details radio clearfix">-->
+                <div class="clearfix">
+                    <label for="status-container">Status:</label>
+                    <div class="status-options clearfix" name="status-container">
+                        <label for="married">Married</label>
+                        <input type="radio" name="status" id="married" value="m" checked/>
+                        <label for="single">Single</label>
+                        <input type="radio" name="status" id="single" value="s" />
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="hobbies">Hobbies:</label>
+                    <select class="deatils hobby clearfix" name="hobbies" id="hobbies" multiple>
+                        <optgroup label="Outside Hobbies">
+                            <option value="1">Sport</option>
+                            <option value="2">Drive</option>
+                        </optgroup>
+                        <optgroup label="Inside Hobbies">
+                            <option value="3">Photo</option>
+                            <option value="4">Music</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <input type="hidden" value="W24LCH" name="code" id="code"/>
+                <br>
+                <button class="form-submit clearfix" type="submit">Submit</button>
+                <button class="form-reset clearfix" type="reset">Reset</button>
+            </fieldset>
+        </form>
+
+    </main>
+    <!-- <footer>
+        Sign In Page
+    </footer> -->
+</body>
+
+</html>

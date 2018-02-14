@@ -1,0 +1,38 @@
+*{
+    direction: rtl;
+    text-align: right;
+}
+
+nav{
+    background-color: #333;
+    font-family: Arial;
+}
+
+nav > ul{
+    list-style: none;
+    padding: 0;
+}
+
+nav > ul >li{
+    display: inline;
+}
+
+nav > ul >li >a{
+    color: white;
+    text-decoration: none;
+    font-size: 130%;
+    padding: 10px;
+    display: inline-block;
+}
+
+nav > ul >li:last-child{
+    float: left;
+}
+
+nav > ul >li>a:hover{
+    background-color: black;
+}
+
+nav > ul> li > .active{
+    background-color: lightseagreen;
+}

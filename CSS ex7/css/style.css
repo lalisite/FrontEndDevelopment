@@ -1,0 +1,3 @@
+a:hover{color: green; text-decoration: none;}
+td:first-child{height: 50px;}
+td:nth-child(2){background-color: green;}

@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Tahoma;
+}
+
+form{
+    /* border: 1px solid ; */
+    width:80%;
+    margin: auto;
+}
+
+.form-item>label{
+    /* border: 1px solid; */
+    width: 30%;
+    display: block;
+    float: left;
+    text-align: right;
+    padding: 5px;
+}
+
+.form-item > input{
+    width:70%;
+    display: block;
+    float:left;
+    padding: 5px;
+}
+
+.clearfix::after{
+    content: "";
+    display: table;
+    clear:both;
+}
+
+.form-item{
+    margin:5px;
+}

@@ -1,0 +1,50 @@
+<html>
+<head>
+	<style>
+		img {
+			width: 200px;
+			height: 300px;
+		}
+	</style>
+	
+	<script>
+		
+		function changeFontSize() {
+			document.getElementById('my-p').style.fontSize = '32px';
+			window.alert('This is an alert!');
+			console.log('My first log message');
+		}
+	</script>
+	
+	<script src="script.js"></script>
+</head>
+<body>
+	<h2>Let's see what JavaScript can do!</h2>
+	<p id="my-p">Replace this text</p>
+	<button onclick="document.getElementById('my-p').innerHTML = '<h1>Hello JavaScript!</h1>'">Replace Text</button>
+	<button onclick="changeFontSize()">Enlarge Font</button>
+	
+	<br>
+	
+	<script>
+		document.write("<h1>Testing document write</h1>");
+	</script>
+	
+	<br>
+	
+	<button onclick="lightBulbOn()">Turn On</button>
+	
+	
+	<img id="light-bulb" src="http://biruwa.net/wp-content/uploads/2017/02/Light-bulb-vector.jpg">
+	<button onclick="lightBulbOff()">Turn Off</button>
+	<!--<button onclick="document.getElementById('light-bulb').setAttribute('src', 'http://i.dailymail.co.uk/i/pix/2014/01/26/article-2546363-1AFB247500000578-934_306x423.jpg')">Turn Off</button>-->
+	<!-- http://i.dailymail.co.uk/i/pix/2014/01/26/article-2546363-1AFB247500000578-934_306x423.jpg -->
+	
+	<button onclick="document.write('Testing document write');">Document Write</button>
+	
+	<br>
+	
+	<button onclick="myCalc()">Calc</button>
+	
+</body>
+</html>
