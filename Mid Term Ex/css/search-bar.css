@@ -3,7 +3,8 @@ nav > .search-bar{
     display: inline-block;  
     direction: ltr;
     border: 1px solid; 
-    padding : 10px 0;  
+    padding : 10px 0; 
+    margin: 0 20%; 
 }
 
 nav > .search-bar > button{

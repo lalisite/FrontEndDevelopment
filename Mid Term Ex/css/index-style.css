@@ -11,7 +11,8 @@ html{
 }
 
 nav{
-    margin: 0 20%;
+    /* margin: 0 20%; */
+    background-color: grey;
 }
 
 main{
@@ -31,6 +32,6 @@ main{
 }
 
 /* class for elements that reperesent column */
-.column{
+/* .column{
     float:left;
-}
+} */

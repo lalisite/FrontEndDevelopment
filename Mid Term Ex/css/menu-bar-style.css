@@ -1,13 +1,15 @@
 .menubar{
     direction: rtl;
     display: inline;
-    padding : 0;    
+    padding : 0; 
+   
 }
 
 .menubar > ul{     
     list-style: none;
     padding: 15px 0;
     border: 1px solid;    
+    margin: 0 20%;   
 }
 
 .menubar > ul > li{
@@ -25,7 +27,8 @@
 
 .logo {    
     float:right;
-    margin-top: 38px;       
+    margin-top: 38px; 
+    margin-right: 20%;         
 }
 
 .menu-item{
