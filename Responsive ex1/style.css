@@ -1,0 +1,16 @@
+body{
+    font-size:5px;
+    font-family: Arial;    
+}
+
+article.first{
+    font-size: 2em;
+}
+
+article.second{
+    font-size: 4em;
+}
+
+article.third{
+    font-size: 6em;
+}
