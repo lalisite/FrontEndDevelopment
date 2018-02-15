@@ -15,14 +15,14 @@ nav{
     background-color: grey;
 }
 
-main{
-    margin-top: 15px;
-    padding: 0 20%;
+.content-area{    
+    width: 900px;    
+    margin: 0 auto;
 }
 
-.row{
+/* .row{
     padding: 20px 0px;
-}
+} */
 
 /* class for elements that represent rows the row is essentially clearfix - the next element will start next row */
 .row::after{

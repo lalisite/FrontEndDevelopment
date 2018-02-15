@@ -1,6 +1,31 @@
-
 img{
-    height:225px;
-    margin-top: calc(100vh - 325px);    
+    display: none;
+}
+
+article{
+    display: none;
+}
+
+video{
+    display: none;
+}
+
+@media (min-width: 300px) and (orientation : landscape){
+    img{
+        display: initial;
+    }
+}
+
+@media (device-aspect-ratio: 4/3){
+    article{
+        display: initial;
+    }
+}
+
+@media (max-width : 900px)
+{
+    video{
+        display: initial;
+    }
 }
 

@@ -9,7 +9,7 @@
     list-style: none;
     padding: 15px 0;
     border: 1px solid;    
-    margin: 0 20%;   
+    /* margin: 0 10%;    */
 }
 
 .menubar > ul > li{
@@ -28,7 +28,7 @@
 .logo {    
     float:right;
     margin-top: 38px; 
-    margin-right: 20%;         
+    margin-right: 10%;         
 }
 
 .menu-item{
