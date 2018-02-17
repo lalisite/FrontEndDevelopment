@@ -1,7 +1,46 @@
 footer{
+    height: 38px;
+    background: url('../footer-images/footer_bg.png') repeat-x 0 0;
     position:fixed;
-    height: 30px;
-    background-color: gray;
     bottom:0;
     width: 100%;
+    padding: 0 500px;    
 }
+
+#mcan {
+    float: left;
+    background: url('../footer-images/white_logo.png') no-repeat 0 0;
+    width: 135px;
+    height: 18px;
+    text-indent: -9999px;
+}
+
+.footer-content{
+    margin: 15px 0;
+}
+
+.footer-content > ul{
+    list-style: none;
+    color: white;
+    font-size: 14px;
+    direction: rtl;
+}
+
+.footer-content > ul > li {
+    display: inline;
+}
+
+.footer-content > ul > li > a{
+    color:white;
+    text-decoration:unset;
+}
+
+#fb {
+    float:right;
+    /* display: block;     */
+    bottom: 2px;
+    width: 18px;
+    height: 18px;
+    background: url('../footer-images/fb_icon.png') no-repeat 0 0;
+}
+

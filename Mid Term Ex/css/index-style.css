@@ -6,8 +6,8 @@
     /* border: 1px solid; */
 }
 
-html{
-    height:100%;
+body{
+    font-family: Arial;
 }
 
 nav{
@@ -32,6 +32,6 @@ nav{
 }
 
 /* class for elements that reperesent column */
-/* .column{
+.column{
     float:left;
-} */
+}

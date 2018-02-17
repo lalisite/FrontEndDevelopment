@@ -15,3 +15,8 @@ nav > .search-bar > button{
 nav > .search-bar > button > img{  
     border:0;
 }
+
+nav > .search-bar > a {
+    color:white;
+    text-decoration:unset;
+}
