@@ -41,17 +41,70 @@ main{
     margin-top:18px;
 }
 
-.second-row{    
+.second-row{        
+    background-image: url("../main-page-images/small_cube_bg.png");      
     float: left;
-    width: 244px;
-    height: 216px;  
-    padding: 0 24px;
-    background-image: url("../main-page-images/cube_bg.png");
-    background-size: cover;
-    background-repeat: no-repeat;      
+    width: 293px;
+    height: 215px;      
+    background-repeat: no-repeat;    
+    
+    padding: 0 24px;      
 }
 
 .second-row.margins{
-    margin: 0 11px;
+    margin: 0 10px ; 
 }
+
+.second-row > h3{
+    direction: rtl;
+    text-align: right;
+    height: 34px;    
+    line-height: 34px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #575757;
+}
+
+.location-links,.more-info{
+    float: right;
+    direction: rtl;
+    text-align: right;
+    font-size: 13px;
+    color: #72716d;
+}
+
+.location-links > ul{
+    list-style: none;
+}
+
+.location-links > ul > li{
+    margin: 5px 0;
+}
+
+.location-links > ul > li > a {
+    color: #72716d;
+}
+
+.location-links > ul > li > a > span > img{
+    margin-right: 5px;
+}
+
+#north-img{
+    margin-right: 10px;
+}
+
+.more-info{
+    float:left;
+    margin-top: 15px    
+}
+
+.more-info > a{
+    color: #72716d;
+}
+
+.more-info > a > span > img{
+    margin-right:5px;
+}
+
 
