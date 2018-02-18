@@ -1,0 +1,206 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    font-family: Arial;  
+}
+
+/* select all elemnts that has the attribue class and it begins with '-' */
+*[class^="col-"]{
+    float:left;
+    padding:10px
+}
+
+.row::after{
+    content: "";
+    display: table;
+    clear:both;
+}
+
+
+/*--------------------------*/
+/* NAV section              */
+/*--------------------------*/
+nav{        
+    background-color: black;
+    /* padding: 15px 10px;  */
+    position: relative;  
+}
+
+nav a{
+    display: inline-block;
+    color: white;
+    background-color: black;
+    text-decoration: none;    
+    padding  : 15px;
+}
+
+nav::after{
+    content: "";
+    display: table;
+    clear:both;
+}
+
+/* .logo{
+    float : left;
+} */
+
+.menu{
+    float:right
+}
+
+.icon{
+    display: none;
+}
+
+/*--------------------------*/
+/* main img section         */
+/*--------------------------*/
+
+.main-img{
+    padding: 5px 15px 15px 15px;        
+}
+
+.main-img >img{
+    width: 100%;
+}
+
+/*--------------------------*/
+/* projects section         */
+/*--------------------------*/
+
+.projects{
+    padding: 10px;    
+    box-sizing: content-box;
+}
+
+.projects > h2{
+    color: grey;
+    padding-bottom: 10px;
+    border-bottom: 2px solid lightgrey;
+    margin-bottom: 10px;
+}
+
+/*--------------------------*/
+/* project section          */
+/*--------------------------*/
+
+.project{
+    padding: 10px 5px 5px 5px;
+    float:left;    
+}
+
+.project > img{
+    width: 100%;
+}
+
+.project >button{
+    display: block;
+    width: 100%;
+}
+
+.project > p{
+    margin: 13px 0;
+}
+
+.project > button{
+    border: none;
+    text-align: center; 
+    font-size: 1em;
+    height: 2em;
+    margin-top: 10px;
+}
+
+/*--------------------------*/
+/* footer section           */
+/*--------------------------*/
+
+footer{
+    box-sizing: content-box;
+    /* display: block; */
+    /* width: 100%; */
+    color : white;
+    background-color: black;
+    text-align: center;    
+    padding: 1.5em 0;    
+    font-size: 0.75em;
+}
+
+
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media screen and (max-width: 600px) {
+
+    .col-1 {width: 100%;}
+    .col-2 {width: 100%;}
+    .col-3 {width: 100%;}
+    .col-4 {width: 100%;}
+    .col-5 {width: 100%;}
+    .col-6 {width: 100%;}
+    .col-7 {width: 100%;}
+    .col-8 {width: 100%;}
+    .col-9 {width: 100%;}
+    .col-10 {width: 100%;}
+    .col-11 {width: 100%;}
+    .col-12 {width: 100%;}
+
+    .menu > a:not(:last-child){
+        display: none;        
+    }
+    
+    .icon{
+        display: inline-block;
+        
+        color:white;
+        font-family: Arial;  
+    }
+
+    /* nav{
+        position: relative;
+    }
+
+    .menu.responsive{
+        margin-top: 30px;                 
+    }    
+
+    .menu.responsive a{
+        display: block;         
+    }
+
+    .menu.responsive a.icon{
+        position: absolute;
+        top:0;
+        right:0;
+    } */
+
+
+    .menu.responsive a:not(:last-child){
+        display: block;         
+    }
+
+    .menu.responsive{
+        float:none;
+    }
+
+    nav{
+        position: relative;
+    }
+
+    .menu.responsive a.icon{
+        position: absolute;
+        top:0;
+        right:0;
+    }
+}
