@@ -4,7 +4,7 @@ footer{
     position:fixed;
     bottom:0;
     width: 100%;
-    padding: 0 500px;    
+    /* padding: 0 500px;     */
 }
 
 #mcan {
@@ -15,7 +15,7 @@ footer{
     text-indent: -9999px;
 }
 
-.footer-content{
+.footer-content{    
     margin: 15px 0;
 }
 
