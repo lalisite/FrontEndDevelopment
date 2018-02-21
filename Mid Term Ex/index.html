@@ -15,14 +15,21 @@
 </head>
 
 <body>
+    <header>
+
+    </header>
     <div class="content-area">
         <nav>
             <form class="row search-bar">
-                <button type="submit">
-                    <img src="search-bar-images/search_button.png" alt="image">
-                </button>
-                <input type="text">
-                <a href="#">English</a>
+                <a id="mag-glass" href="#">&nbsp;&nbsp;</a>
+                <div class="input">
+                    <input name="search-bar" type="text" placeholder="רשום מילם חיפוש" id="search-bar">
+                </div>
+                <!-- <button type="submit"> -->
+                <!-- <img src="search-bar-images/search_button.png" alt="image"> -->
+                <!-- </button> -->
+                <!-- <input type="text" placeholder="רשום מילם חיפוש"> -->
+                <a class="lang" href="#">English</a>
             </form>
             <div class="menubar">
                 <div class="logo">
@@ -39,36 +46,36 @@
                     <li class="menu-item">
                         <img src="header-menu-images/menu_sep.png" />
                     </li>
-                    <li class="menu-item">
+                    <li class="menu-item dropdown">
                         <a href="#">אודות</a>
                         <div class="dropdown-content">
                             <ul>
                                 <li>
-                                    <a href="#"></a>
+                                    <a href="#">אודות</a>
                                 </li>
                                 <li class="seperator"></li>
                                 <li>
-                                    <a href="#"></a>
+                                    <a href="#">הסטוריה</a>
                                 </li>
                                 <li class="seperator"></li>
                                 <li>
-                                    <a href="#"></a>
+                                    <a href="#">חזון וערכים</a>
                                 </li>
                                 <li class="seperator"></li>
                                 <li>
-                                    <a href="#"></a>
+                                    <a href="#">מבנה הקבוצה</a>
                                 </li>
                                 <li class="seperator"></li>
                                 <li>
-                                    <a href="#"></a>
+                                    <a href="#">חברי דירקטוריון</a>
                                 </li>
                                 <li class="seperator"></li>
                                 <li>
-                                    <a href="#"></a>
+                                    <a href="#">הנהלת הקבוצה</a>
                                 </li>
                                 <li class="seperator"></li>
                                 <li>
-                                    <a href="#"></a>
+                                    <a href="#">פרסים והוקרה</a>
                                 </li>
                             </ul>
                         </div>
@@ -76,38 +83,148 @@
                     <li class="menu-item">
                         <img src="header-menu-images/menu_sep.png" />
                     </li>
-                    <li class="menu-item">
+                    <li class="menu-item dropdown">
                         <a href="#">חטיבות</a>
+                        <div class="dropdown-content">
+                            <ul>
+                                <li>
+                                    <a href="#">חטיבות</a>
+                                </li>
+                                <li class="seperator"></li>
+                                <li>
+                                    <a href="#">קמעונאות ומסחר</a>
+                                </li>
+                                <li class="seperator"></li>
+                                <li>
+                                    <a href="#">תעשיה ושרותים</a>
+                                </li>
+                                <li class="seperator"></li>
+                                <li>
+                                    <a href="#">זיקוק</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="menu-item">
                         <img src="header-menu-images/menu_sep.png" />
                     </li>
-                    <li class="menu-item">
+                    <li class="menu-item dropdown">
                         <a href="#">אחריות תאגידית</a>
+                        <div class="dropdown-content">
+                            <ul>
+                                <li>
+                                    <a href="#">אחריות תאגידית</a>
+                                </li>
+                                <li class="seperator"></li>
+                                <li>
+                                    <a href="#">הקוד האתי</a>
+                                </li>
+                                <li class="seperator"></li>
+                                <li>
+                                    <a href="#">מעורבות חברתית</a>
+                                </li>
+                                <li class="seperator"></li>
+                                <li>
+                                    <a href="#">נגישות</a>
+                                </li>
+                                <li class="seperator"></li>
+                                <li>
+                                    <a href="#">איכות הסביבה ובטיחות</a>
+                                </li>
+                                <li class="seperator"></li>
+                                <li>
+                                    <a href="#">דירוג מעלה</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="menu-item">
                         <img src="header-menu-images/menu_sep.png" />
                     </li>
-                    <li class="menu-item">
+                    <li class="menu-item dropdown">
                         <a href="#">קשרי משקיעים</a>
+                        <div class="dropdown-content">
+                            <ul>
+                                <li>
+                                    <a href="#">קשרי משקיעים</a>
+                                </li>
+                                <li class="seperator"></li>
+                                <li>
+                                    <a href="#">דוחו"ת כספיים</a>
+                                </li>
+                                <li class="seperator"></li>
+                                <li>
+                                    <a href="#">כלים למשקיע</a>
+                                </li>
+                                <li class="seperator"></li>
+                                <li>
+                                    <a href="#">נתוני מניה</a>
+                                </li>
+                                <li class="seperator"></li>
+                                <li>
+                                    <a href="#">אסיפות כלליות</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="menu-item">
                         <img src="header-menu-images/menu_sep.png" />
                     </li>
-                    <li class="menu-item">
+                    <li class="menu-item dropdown">
                         <a href="#">התחנות שלנו</a>
+                        <div class="dropdown-content">
+                            <ul>
+                                <li>
+                                    <a href="#">התחנות שלנו</a>
+                                </li>
+                                <li class="seperator"></li>
+                                <li>
+                                    <a href="#">רשימת תחנות</a>
+                                </li>
+                                <li class="seperator"></li>
+                                <li>
+                                    <a href="#">מועדונים</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="menu-item">
                         <img src="header-menu-images/menu_sep.png" />
                     </li>
-                    <li class="menu-item">
+                    <li class="menu-item dropdown">
                         <a href="#">קריירה</a>
+                        <div class="dropdown-content">
+                            <ul>
+                                <li>
+                                    <a href="#">לעבוד בפז</a>
+                                </li>
+                                <li class="seperator"></li>
+                                <li>
+                                    <a href="#">ניהול תחנת פז</a>
+                                </li>
+                                <li class="seperator"></li>
+                                <li>
+                                    <a href="#">קריירה</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="menu-item">
                         <img src="header-menu-images/menu_sep.png" />
                     </li>
-                    <li class="menu-item">
+                    <li class="menu-item dropdown">
                         <a href="#">חדשות ומדיה</a>
+                        <div class="dropdown-content">
+                            <ul>
+                                <li>
+                                    <a href="#">פרסומות</a>
+                                </li>
+                                <li class="seperator"></li>
+                                <li>
+                                    <a href="#">הודעה לעיתונות</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -116,13 +233,51 @@
             <div class="first-part">
                 <div class="row">
                     <div id="first-box" class="column first-row">
-                        <!-- <img id="first-box" src="../main-page-images/פזקר_-291_354410564000.jpg" alt="first-image"/> -->
+                        <div class="details-box">
+                            <h3>תעשיות ושירותים</h3>
+                            <p>
+                            </p>
+                            <p>תחת חטיבת התעשיות והשירותים של פז פועלות מספר חברות בנות, המתמחות בפיתוח, ייצור ושיווק מוצרי
+                                לוואי של נפט, ומובילות את השוק...
+                                <br>
+                            </p>
+                            <p></p>
+                            <a href="index.aspx?id=4310" class="read-more" target="_blank">
+                                <span>קרא עוד</span>
+                            </a>
+                        </div>
+
                     </div>
                     <div id="second-box" class="column first-row">
-                        <!-- <img id="second-box" src="../main-page-images/Picture-046410251500.jpg" alt="second-image"/> -->
+                        <div class="details-box">
+                            <h3>זיקוק</h3>
+                            <p>
+                            </p>
+                            <p>פז זיקוק אשדוד (פז"א) היא חטיבת הזיקוק של קבוצת פז. החטיבה עוסקת בניהול פעילות בית הזיקוק באשדוד,
+                                הכוללת ייצור תזקיקי נפט...
+                                <br>
+                                <br>
+                            </p>
+                            <p></p>
+                            <a href="index.aspx?id=4310" class="read-more" target="_blank">
+                                <span>קרא עוד</span>
+                            </a>
+                        </div>
                     </div>
                     <div id="third-box" class="column first-row">
-                        <!-- <img id="third-box" src="../main-page-images/1908364606615453350.JPG" alt="third-image"/> -->
+                        <div class="details-box">
+                            <h3>קמעונאות ומסחר</h3>
+                            <p>
+                            </p>
+                            <p>במסגרת חטיבת הקו"מ של פז מתבצעת הפעילות הקמעונאית, הנדל"נית, והשיווקית של הקבוצה, שמתאפיינת בחדשנות,
+                                יעילות ומובילות. החטיבה פועלת...
+                                <br>
+                            </p>
+                            <p></p>
+                            <a href="index.aspx?id=4310" class="read-more" target="_blank">
+                                <span>קרא עוד</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
