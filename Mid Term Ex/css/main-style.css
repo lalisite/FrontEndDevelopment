@@ -1,6 +1,7 @@
 
 main{
-    margin-top:30px;
+    margin-top:35px;
+    padding-top : 10px;
 }
 
 .first-row{
@@ -13,6 +14,10 @@ main{
     border-bottom-right-radius: 20px;   
     padding:0;
     margin:0; 
+}
+
+.first-row.column{
+    position: relative;
 }
 
 /* .first-row  img{
@@ -34,6 +39,7 @@ main{
 
 #third-box{
     background-image: url("../main-page-images/1908364606615453350.JPG");
+    position: relative;
     /* border-bottom-right-radius: 20px; */
 }
 
@@ -106,5 +112,43 @@ main{
 .more-info > a > span > img{
     margin-right:5px;
 }
+
+.details-box {
+    width: 250px;
+    height: 100px;
+    overflow: hidden;
+    padding: 10px;
+    position: absolute;
+    right: 10px;    
+    bottom: 6px;
+    color: #fff;
+    background: url('../main-page-images/hp_tab_text_bg.png') no-repeat 0 0;    
+    font-family: Arial, Helvetica, sans-serif;
+    direction: rtl;
+}
+
+.details-box > h3{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.details-box > p {
+    font-size: 13px;
+}
+
+.details-box > .read-more{
+    direction: rtl;
+    float: left;
+    color: #fff;
+    position: relative;
+    bottom: 8px;
+    font-size: 13px;
+    background: url('../main-page-images/read_more_white.png') no-repeat left center;
+}
+
+.details-box > .read-more > span{
+    padding-left: 12px;
+}
+
 
 

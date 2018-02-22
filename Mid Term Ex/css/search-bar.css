@@ -1,22 +1,44 @@
 
-nav > .search-bar{
-    display: inline-block;  
+nav > .search-bar{    
     direction: ltr;
-    border: 1px solid; 
+    /* border: 1px solid;  */
     padding : 10px 0; 
     /* margin: 0 10%;  */
 }
 
-nav > .search-bar > button{
-    width:19px;
-    height:19px;       
-}
+/* nav > .search-bar > button{  
+    width:20px;  
+    background: url('../search-bar-images/search_button.png') no-repeat 0 0;     
+    height: 20px;
+    
+} */
 
-nav > .search-bar > button > img{  
-    border:0;
-}
 
-nav > .search-bar > a {
+nav > .search-bar > .lang {
+    float:left;    
     color:white;
     text-decoration:unset;
+    font-family: Arial, Helvetica, sans-serif;
+    margin : 0 10px;
+    font-size:12px;
+    padding: 3px 0 ;
 }
+
+.search-bar > .input{
+    float:left;    
+    padding: 0;
+    margin: 0;
+    height: 19px;   
+    border-top-right-radius: 20px; 
+   
+}
+
+.search-bar > #mag-glass{    
+    float: left;
+    width: 19px;
+    height: 19px;
+    background: url('../search-bar-images/search_button.png') no-repeat 0 0;   
+    text-decoration: none;  
+}
+
+
