@@ -1,0 +1,9 @@
+.container.content{
+    padding : 1.5em;
+    background-color: #e9ecef;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.card-img-top.rounded-circle{
+    padding: 10px;
+}
