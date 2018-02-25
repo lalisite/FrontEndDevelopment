@@ -1,0 +1,11 @@
+/* Styles go here */
+
+#my-div {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+  }
+  
+  .blue-background {
+    background-color: blue;
+  }
