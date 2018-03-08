@@ -1,0 +1,14 @@
+.wrapper     {
+    position: relative;   
+}
+
+.text{    
+    display: none;
+    position: absolute;
+    color: lightseagreen; 
+    font-size: 1.5em;    
+    font-weight: bold;
+    top:35%;
+    left: 0;
+    width: 100%;
+}

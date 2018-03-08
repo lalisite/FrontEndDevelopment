@@ -1,26 +1,21 @@
 //@ts-check
-function truncateString(str, num) {
-    // Clear out that junk in your trunk
-    var result = "";
-    if(num <= str.length){
-        result = String(str).slice(0,num-3) + "...";
-    }   
-    else if(num >=0 && num<=3){
-        result = String(str).slice(0,num) + "...";
+function slasher(arr, howMany) {
+    // it doesn't always pay to be first
+    if(howMany == 0){
+        return arr;
     }
+    if(howMany > arr.length){
+      return [];
+    }   
     
-    str = result;        
-
-    return str;
+    arr.splice(0,howMany);
+    //arr=arr.slice(arr.length-howMany+1,arr.length);    
+    
+    return arr;
   }
   
-  var str = truncateString("A-", 1);
-
-  console.log(str);
-
-  str = truncateString("A-tisket a-tasket A green and yellow basket", 11);
-
-  console.log(str);
-  
-  
+  var r = slasher([1, 2, 3], 2);
+  console.log(r);
+  r =slasher(["burgers", "fries", "shake"], 1);
+  console.log(r);
   
