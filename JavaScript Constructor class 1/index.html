@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Cars</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+    <!--           -->
+
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <main class="container">
+        <h1 class="text-center">
+            My Cars Collection
+        </h1>
+        <div class="form-group">
+            <label for="brand">Car Brand</label>
+            <input type="text" class="form-control" name="brand" id="brand" aria-describedby="helpId" placeholder="brand">
+            <br>
+            <label for="model">Car Model</label>
+            <input type="text" class="form-control" name="model" id="model" aria-describedby="helpId" placeholder="model">
+            <br>
+            <label for="km">Car Kilometer</label>
+            <input type="number" min=0 class="form-control" name="km" id="km" aria-describedby="helpId" placeholder="km">
+            <br>
+            <label for="year">Car Year Of Purchase</label>
+            <input type="number" min=1980 class="form-control" name="year" id="year" aria-describedby="helpId" placeholder="year">
+            <br>
+            <button type="button" id="add-car-btn" class="btn btn-primary">Add</button>
+        </div>
+        <div class="container">
+                <table class="table table-dark table-striped">
+                        <thead>
+                          <tr>
+                            <th>Brand</th>
+                            <th>Model</th>
+                            <th>Km</th>
+                            <th>Year</th>
+                            <th>Km Per Year</th>
+                          </tr>
+                        </thead>
+                        <tbody class="car-list">
+                          <!-- <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                          </tr>
+                          <tr>
+                            <td>Mary</td>
+                            <td>Moe</td>
+                            <td>mary@example.com</td>
+                          </tr>
+                          <tr>
+                            <td>July</td>
+                            <td>Dooley</td>
+                            <td>july@example.com</td>
+                          </tr> -->
+                        </tbody>
+                      </table>
+        </div>
+    </main>
+
+</body>
+
+</html> 

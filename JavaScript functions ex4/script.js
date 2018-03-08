@@ -55,11 +55,20 @@ $(function () {
         );
     }
 
+    function toggleHover(idMouseEnter, idToggle){
+        $(idMouseEnter).hover(
+            function () { 
+                $(idToggle).toggle();
+            }
+        );
+    }
+
     var arr = ['#us', '#isr', '#italy', '#holland', '#france'];
 
      for(var i=0 ; i < arr.length ; i++){
-        toggleMouseEnter(arr[i],arr[i]+"-txt");
-        toggleMouseLeave(arr[i],arr[i]+"-txt");
+        // toggleMouseEnter(arr[i],arr[i]+"-txt");
+        // toggleMouseLeave(arr[i],arr[i]+"-txt");
+        toggleHover(arr[i],arr[i]+"-txt");
      }
 
 });
