@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="templateDemo">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="ctrl.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>AngularJS Templates</h1>
+        <div ng-controller="ctrl">
+            <!-- <ul>
+           <li ng-repeat="num in numArr">
+               {{num}}
+            </li>
+       </ul>
+       <button class="btn btn-primary" ng-click="add(10)">Add 10</button> -->
+            <div class="input group">
+                <label for="search">Filter: </label>
+                <!-- filter on all properties of car -->
+                <!--<input type="text" id="search" ng-model="searchText">-->
+
+                <!-- filter on brand property of car -->
+                <!--<input type="text" id="search" ng-model="searchText.brand">-->
+
+                 <!-- filter on filter functions property of car -->
+                 <input type="text" id="search" ng-model="searchText">
+            </div>
+            <table class="table table-success table-striped table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th ng-click="changeSort('brand')">Brand</th>
+                        <th ng-click="changeSort('model')">Model</th>
+                        <th ng-click="changeSort('year')">Year</th>
+                        <th ng-click="changeSort('km')">Kilomemter</th>
+                        <th >Km Per Year</th>
+                        <th ng-click="changeSort('testDate')">Test Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- used for simple filtering -->
+                    <!--<tr ng-repeat="car in cars | filter: searchText">-->
+                    <tr ng-repeat="car in cars | filter: filterCar | orderBy : sortProp">
+                        <td>{{car.brand}}</td>
+                        <td>{{car.model}}</td>
+                        <td>{{car.year}}</td>
+                        <td>{{car.km | number}}</td>
+                        <td>{{car.kmPerYear() | number}}</td>
+                        <td>{{car.testDate| date}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button ng-click="addCar('BMW','X6',2016,5300,'06-04-2018')">Add Car</button>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

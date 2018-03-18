@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="">
-
+<html ng-app="myCalculatorApp">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,23 +20,25 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
+    <script src="app.js"></script>
+    <script src="calculatorController.js"></script>
 </head>
 
-<body>
+<body>    
     <div class="container">
-        <div ng-init="num1=0;num2=0;">
+        <div ng-controller="calculatorCtrlr">
             <div class="form-group">
                 <label for="num1">First Number :</label>
                 <input type="number" ng-model="num1" class="form-control" name="num1" id="num1" placeholder="Enter First Number">
                 <br>
-                <label for="num1">Second Number :</label>
+                <label for="num2">Second Number :</label>
                 <input type="number" ng-model="num2" class="form-control" name="num2" id="num2" placeholder="Enter Second Number">
                 <br>
                 <hr>
-                <p>Sum : {{num1|number}} + {{num2|number}} = {{num1+num2|number}}</p>
-                <p>Sub : {{num1|number}} - {{num2|number}} = {{num1 -num2|number}}</p>
-                <p>Mult : {{num1|number}} * {{num2|number}} = {{num1 * num2|number}}</p>
-                <p>Div : {{num1|number}} / {{num2|number}} = {{num1/num2|number:2}}</p>
+                <p>Sum : {{num1|number}} + {{num2|number}} = {{sum()|number}}</p>
+                <p>Sub : {{num1|number}} - {{num2|number}} = {{sub(num1,num2)|number}}</p>
+                <p>Mult : {{num1|number}} * {{num2|number}} = {{mult(num1,num2)|number}}</p>
+                <p>Div : {{num1|number}} / {{num2|number}} = {{div(num1,num2)|number:2}}</p>
             </div>
         </div>
     </div>

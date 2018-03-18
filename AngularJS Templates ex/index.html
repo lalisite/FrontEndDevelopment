@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html ng-app="angularTemplatesApp">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Angular Templates</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="../scripts/app.js"></script>
+    <script src="../scripts/controller.js"></script>
+</head>
+
+<body>
+    <div ng-controller="mainController">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Actors
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Leaders</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-3">Favorite Actors</h1>
+                    <p class="lead">Details of my favorite actors</p>
+                    <hr class="my-2">
+                    <div class="container">
+                        <div class="row">
+                            <h2 class="my-2">Filters</h2>
+                        </div>
+                        <div class="input-group row">
+                            <div class="col-6">
+                                <label for="nameSearch">Name: </label>
+                                <input class="form-control" aria-describedby="basic-addon2" id="nameSearch" type="text" ng-model="name">
+                            </div>
+                            <div class="col-6">
+                                <label for="mob">Month Of Birth: </label>
+                                <input class="form-control" aria-describedby="basic-addon2" id="mob" type="number" min=1 max=12 ng-model="month" placeholder="Month number">
+                            </div>
+                            <div class="col-6">
+                                <label for="orderby">Field: </label>
+                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="orderby" ng-model="selectedField">
+                                    <option selected>Choose...</option>
+                                    <option ng-repeat="propName in actorPropertiesList" value="{{propName.value}}">{{propName.label}}</option>
+
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <label for="field">Order By: </label>
+                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="field" ng-model="selectedOrderType" ng-change="convertSelected()">
+                                    <option selected>Choose...</option>
+                                    <option ng-repeat="stype in sortTypes" value="{{stype.value}}">{{stype.label}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="card col-md-3" ng-repeat="actor in actors | filter:filterActor | orderBy : selectedField : selectedOrderTypeVal">
+                                <br>
+                                <img class="card-img-top" src="{{actor.imgUrl}}" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title">{{actor.fname}} {{actor.lname}}</h4>
+                                    <label>Date Of Birth :</label>
+                                    <p class="card-text">{{actor.birthday | date : 'dd/MM/yyyy'}}</p>
+                                    <a href="{{actor.imdbLink}}" class="card-link" target="_blank">IMDB</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
