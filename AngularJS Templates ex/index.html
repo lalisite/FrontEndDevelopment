@@ -22,6 +22,7 @@
 
     <script src="../scripts/app.js"></script>
     <script src="../scripts/controller.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 </head>
 
 <body>
@@ -69,7 +70,7 @@
                             <div class="col-6">
                                 <label for="orderby">Field: </label>
                                 <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="orderby" ng-model="selectedField">
-                                    <option selected>Choose...</option>
+                                    <!-- <option selected>Choose...</option> -->
                                     <option ng-repeat="propName in actorPropertiesList" value="{{propName.value}}">{{propName.label}}</option>
 
                                 </select>
@@ -84,9 +85,39 @@
                         </div>
                         <hr>
                         <div class="row">
-                            <div class="card col-md-3" ng-repeat="actor in actors | filter:filterActor | orderBy : selectedField : selectedOrderTypeVal">
+                            <h2 class="my-2">Add Actor</h2>
+                        </div>
+                        <div class="row">
+                            <form class="form-inline">                               
+                                <div class="form-group mb-2">
+                                  <label for="inFname" class="sr-only">First Name</label>
+                                  <input type="text" class="form-control" id="inFname" placeholder="First Name" ng-model="inFirstName">
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="inLname" class="sr-only">Last Name</label>
+                                    <input type="text" class="form-control" id="inLname" placeholder="Last Name" ng-model="inLastName">
+                                  </div>
+                                  <div class="form-group mb-2">
+                                    <label for="inbd" class="sr-only">Birthday</label>
+                                    <input type="date" class="form-control" id="inbd" placeholder="Birthday" ng-model="inBirthday">
+                                  </div>
+                                  <div class="form-group mb-2">
+                                    <label for="inImg" class="sr-only">Image Link</label>
+                                    <input type="text" class="form-control" id="inImg" placeholder="Image Link" ng-model="inImgLink">
+                                  </div>
+                                  <div class="form-group mb-2">
+                                    <label for="inimdb" class="sr-only">IMDB Link</label>
+                                    <input type="text" class="form-control" id="inimdb" placeholder="IMDB Link"
+                                    ng-model="inIMDB">
+                                  </div>
+                                <button type="submit" class="btn btn-primary mb-2" ng-click="addActor(inFirstName,inLastName,inBirthday,inImgLink,inIMDB)">Add</button>
+                              </form>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="card col-md-3" ng-repeat="actor in actors | filter:filterActor | orderBy : selectedField : selectedOrderTypeVal" ng-class="{selected : actor.isSelected}" ng-click="toggleSelected(actor)">
                                 <br>
-                                <img class="card-img-top" src="{{actor.imgUrl}}" alt="Card image">
+                                <img class="card-img-top" ng-src="{{actor.imgUrl}}" alt="Card image">
                                 <div class="card-body">
                                     <h4 class="card-title">{{actor.fname}} {{actor.lname}}</h4>
                                     <label>Date Of Birth :</label>
@@ -98,7 +129,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </body>

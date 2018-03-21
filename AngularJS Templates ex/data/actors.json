@@ -1,0 +1,31 @@
+[    
+    {
+        "fname":"Robert", 
+        "lname":"De Niro", 
+        "imgUrl":"https://ia.media-imdb.com/images/M/MV5BMjAwNDU3MzcyOV5BMl5BanBnXkFtZTcwMjc0MTIxMw@@._V1_UY317_CR13,0,214,317_AL_.jpg", 
+        "imdbLink":"https://www.imdb.com/name/nm0000134/?ref_=nv_sr_3", 
+        "birthday":"08-19-1943"
+    },
+    {
+        "fname":"Robert", 
+        "lname":"Redford", 
+        "imgUrl":"https://ia.media-imdb.com/images/M/MV5BMTk1Nzc5MzQyMV5BMl5BanBnXkFtZTcwNjQ5OTA0Mg@@._V1_UY317_CR7,0,214,317_AL_.jpg", 
+        "imdbLink":"https://www.imdb.com/name/nm0000602/?ref_=nv_sr_1", 
+        "birthday":"08-18-1936"
+    },
+    {
+        "fname":"Dwayne", 
+        "lname":"Johnson", 
+        "imgUrl":"https://ia.media-imdb.com/images/M/MV5BMTkyNDQ3NzAxM15BMl5BanBnXkFtZTgwODIwMTQ0NTE@._V1_UX214_CR0,0,214,317_AL_.jpg", 
+        "imdbLink":"https://www.imdb.com/name/nm0425005/?ref_=nv_sr_1", 
+        "birthday":"05-02-1972"
+    },
+    {
+        "fname":"Charlton", 
+        "lname":"Heston", 
+        "imgUrl":"https://ia.media-imdb.com/images/M/MV5BMTcxMDg1MjYzMV5BMl5BanBnXkFtZTYwMDMxOTE2._V1_UX214_CR0,0,214,317_AL_.jpg", 
+        "imdbLink":"https://www.imdb.com/name/nm0000032/?ref_=tt_ov_st_sm", 
+        "birthday":"10-04-1923"
+    }
+
+]
