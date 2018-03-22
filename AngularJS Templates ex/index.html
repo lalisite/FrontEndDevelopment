@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Angular Templates</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
     <!-- Latest compiled and minified CSS -->
@@ -20,13 +21,19 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-    <script src="../scripts/app.js"></script>
-    <script src="../scripts/controller.js"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/controller.js"></script>
+    <script src="scripts/controllers/moviesCtrl.js"></script>
+    <script src="scripts/directives/movieDirective.js"></script>
+    <script src="scripts/services/moviesService.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 </head>
 
 <body>
-    <div ng-controller="mainController">
+    <div>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
@@ -34,12 +41,12 @@
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Actors
+                        <a class="nav-link" href="#fav-actors">Actors
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Leaders</a>
+                        <a class="nav-link" href="#top-movies">Top Movies</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -49,16 +56,13 @@
             </div>
         </nav>
         <div class="container">
-            <div class="jumbotron jumbotron-fluid">
+            <div ng-controller="mainController" id="fav-actors" class="jumbotron jumbotron-fluid">
                 <div class="container">
                     <h1 class="display-3">Favorite Actors</h1>
                     <p class="lead">Details of my favorite actors</p>
                     <hr class="my-2">
                     <div class="container">
-                        <div class="row">
-                            <h2 class="my-2">Filters</h2>
-                        </div>
-                        <div class="input-group row">
+                        <!-- <div class="input-group row">
                             <div class="col-6">
                                 <label for="nameSearch">Name: </label>
                                 <input class="form-control" aria-describedby="basic-addon2" id="nameSearch" type="text" ng-model="name">
@@ -69,8 +73,7 @@
                             </div>
                             <div class="col-6">
                                 <label for="orderby">Field: </label>
-                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="orderby" ng-model="selectedField">
-                                    <!-- <option selected>Choose...</option> -->
+                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="orderby" ng-model="selectedField">                                   
                                     <option ng-repeat="propName in actorPropertiesList" value="{{propName.value}}">{{propName.label}}</option>
 
                                 </select>
@@ -82,40 +85,65 @@
                                     <option ng-repeat="stype in sortTypes" value="{{stype.value}}">{{stype.label}}</option>
                                 </select>
                             </div>
-                        </div>
-                        <hr>
+                        </div> -->                       
                         <div class="row">
                             <h2 class="my-2">Add Actor</h2>
                         </div>
                         <div class="row">
-                            <form class="form-inline">                               
+                            <form class="form-inline">
                                 <div class="form-group mb-2">
-                                  <label for="inFname" class="sr-only">First Name</label>
-                                  <input type="text" class="form-control" id="inFname" placeholder="First Name" ng-model="inFirstName">
+                                    <label for="inFname" class="sr-only">First Name</label>
+                                    <input type="text" class="form-control" id="inFname" placeholder="First Name" ng-model="inFirstName">
                                 </div>
                                 <div class="form-group mb-2">
                                     <label for="inLname" class="sr-only">Last Name</label>
                                     <input type="text" class="form-control" id="inLname" placeholder="Last Name" ng-model="inLastName">
-                                  </div>
-                                  <div class="form-group mb-2">
+                                </div>
+                                <div class="form-group mb-2">
                                     <label for="inbd" class="sr-only">Birthday</label>
                                     <input type="date" class="form-control" id="inbd" placeholder="Birthday" ng-model="inBirthday">
-                                  </div>
-                                  <div class="form-group mb-2">
+                                </div>
+                                <div class="form-group mb-2">
                                     <label for="inImg" class="sr-only">Image Link</label>
                                     <input type="text" class="form-control" id="inImg" placeholder="Image Link" ng-model="inImgLink">
-                                  </div>
-                                  <div class="form-group mb-2">
+                                </div>
+                                <div class="form-group mb-2">
                                     <label for="inimdb" class="sr-only">IMDB Link</label>
-                                    <input type="text" class="form-control" id="inimdb" placeholder="IMDB Link"
-                                    ng-model="inIMDB">
-                                  </div>
+                                    <input type="text" class="form-control" id="inimdb" placeholder="IMDB Link" ng-model="inIMDB">
+                                </div>
                                 <button type="submit" class="btn btn-primary mb-2" ng-click="addActor(inFirstName,inLastName,inBirthday,inImgLink,inIMDB)">Add</button>
-                              </form>
+                            </form>
                         </div>
                         <hr>
+                        <div class="form-inline">
+                            <div class="form-group mb-2">
+                                <h2 class="my-2">Filters :</h2>
+                            </div>
+                            <div class="form-group mb-2 mx-2">
+                                <label for="nameSearch" class="sr-only">Name</label>
+                                <input class="form-control" aria-describedby="basic-addon2" id="nameSearch" type="text" ng-model="name" placeholder=" Name">
+                            </div>
+                            <div class="form-group mb-2 mx-2">
+                                <label for="mob" class="mx-1">Month Of Birth: </label>
+                                <input class="form-control" aria-describedby="basic-addon2" id="mob" type="number" min=1 max=12 ng-model="month" placeholder="Month number">
+                            </div>
+                            <label for="orderby" class="mb-2 mx-2">Field: </label>
+                            <div class="form-group mb-2">
+                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="orderby" ng-model="selectedField">
+                                    <option ng-repeat="propName in actorPropertiesList" value="{{propName.value}}">{{propName.label}}</option>
+                                </select>
+                            </div>
+                            <label for="field" class="mb-2 mx-2">Order By: </label>
+                            <div class="form-group mb-2">
+                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="field" ng-model="selectedOrderType" ng-change="convertSelected()">
+                                    <option selected>Choose...</option>
+                                    <option ng-repeat="stype in sortTypes" value="{{stype.value}}">{{stype.label}}</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="row">
-                            <div class="card col-md-3" ng-repeat="actor in actors | filter:filterActor | orderBy : selectedField : selectedOrderTypeVal" ng-class="{selected : actor.isSelected}" ng-click="toggleSelected(actor)">
+                            <div class="card col-md-3" ng-repeat="actor in actors | filter:filterActor | orderBy : selectedField : selectedOrderTypeVal"
+                                ng-class="{selected : actor.isSelected}" ng-click="toggleSelected(actor)">
                                 <br>
                                 <img class="card-img-top" ng-src="{{actor.imgUrl}}" alt="Card image">
                                 <div class="card-body">
@@ -126,6 +154,25 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div ng-controller="topMoviesController" id="top-movies">
+                <h1 class="display-3">Top Movies</h1>
+                <hr class="my-2">
+
+                <form class="movies-search-form my-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="search movie" ng-model="queryMovieText" ng-change="searchMovieChange()">
+                    </div>
+                </form>
+                <ul class="movies-search-results list-group" ng-show="searchMoviesResults.length > 0">
+                    <li ng-click="addMovie(movie)" class="list-group-item list-group-item-action" ng-repeat="movie in searchMoviesResults">{{movie.title}}</li>
+                </ul>
+                <hr class="my-2">
+                <div class="row">
+                    <div class="col-md-3 my2" ng-repeat="movie in selectedMovies">
+                        <div class="movie-directive"></div>
                     </div>
                 </div>
             </div>

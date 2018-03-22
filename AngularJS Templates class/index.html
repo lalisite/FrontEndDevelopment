@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <script src="app.js"></script>
     <script src="ctrl.js"></script>
+    <script src="convertService.js"></script>
 
 </head>
 
@@ -56,6 +57,7 @@
                         <th ng-click="changeSort('year')">Year</th>
                         <th ng-click="changeSort('km')">Kilomemter</th>
                         <th>Km Per Year</th>
+                        <th>Miles</th>
                         <th ng-click="changeSort('testDate')">Test Date</th>
                     </tr>
                 </thead>
@@ -68,6 +70,7 @@
                         <td>{{car.year}}</td>
                         <td>{{car.km | number}}</td>
                         <td>{{car.kmPerYear() | number}}</td>
+                        <td>{{car.mile | number}}</td>
                         <td>{{car.testDate| date}}</td>
                     </tr>
                 </tbody>
@@ -76,7 +79,7 @@
             <button ng-click="addCar('BMW','X6',2016,5300,'06-04-2018')">Add Car</button>
             <button ng-click="updateCar()">Update Car</button>
 
-            <img src="{{imageUrl}}">
+            <img ng-src="{{imageUrl}}">
         </div>
     </div>
     </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="actorApp">
+<html ng-app="directivesApp">
 
 <head>
     <meta charset="utf-8" />
@@ -23,31 +23,15 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <script src="app.js"></script>
+    <script src="directives.js"></script>
 </head>
 
-<body ng-controller="actorCtrl">
-    <div class="container">
-        <h1>Favorite Actors</h1>
-        <form class="search-form">
-            <input type="text" class="form-control" placeholder="search actor" ng-model="queryText" ng-change="searchChange()">
-            <div class="search-results list-group" ng-show="searchResults.length > 0">
-                <a ng-click="addActor(result)" href="#" class="list-group-item list-group-item-action" ng-repeat="result in searchResults">{{result.name}}</a>
-            </div>
-        </form>
-        <div class="row">
-            <div class="col-md-3 my-3" ng-repeat="actor in favActors">
-                <div class="card-group">
-                    <div class="card">
-                        <img class="card-img-top" ng-src="{{actor.imageUrl}}" alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title"><a ng-href="{{actor.imdbUrl}}" target="_blank">{{actor.name}}</a></h4>
-                            <p class="card-text">{{actor.birthday | date}}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<body >
+   <h1>AngularJS Directives</h1>
+   <my-directive></my-directive>
+   <my-directive></my-directive>
+   <div my-directive></div>
+   <div class="my-directive"></div>
 </body>
 
 </html>

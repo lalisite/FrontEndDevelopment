@@ -46,3 +46,10 @@ app.controller("actorCtrl", function ($scope, $http) {
     }
 
 });
+
+app.directive("myActor",function(){
+    return{
+        templateUrl : "actor.html",
+        restrict : "EA"
+    };
+});

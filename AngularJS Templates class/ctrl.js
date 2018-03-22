@@ -1,6 +1,6 @@
 //@ts-check
 
-app.controller("ctrl",function($scope,$http){
+app.controller("ctrl",function($scope,$http,convert){
     
     // Example simple array
     // $scope.numArr=[1,2,3,4,5];
@@ -14,6 +14,7 @@ app.controller("ctrl",function($scope,$http){
         this.model = model;
         this.year = year;
         this.km = km;
+        this.mile = convert.distance(this.km,"KM","MILE");//Math.round(convert.km2Mile(km));
         this.testDate = new Date(testDate);
         this.selected = false;
         this.kmPerYear = function(){
@@ -73,6 +74,12 @@ app.controller("ctrl",function($scope,$http){
     $scope.imageUrl ='https://www.e-zrentacar.com/wp-content/plugins/advantage-vehicles/assets/ICAR_800x400.png';
 
     $scope.toggleCarSelected = function(car){
+        // if($scope.selectedCar === car){
+        //     $scope.selectedCar = null;
+        // } else{
+        //     $scope.selectedCar = car;
+        // }
+
         if(car.selected){
             car.selected = false;
         }else{
