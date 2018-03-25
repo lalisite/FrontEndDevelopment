@@ -1,6 +1,6 @@
 //@ts-check
 
-app.controller("ctrl",function($scope,$http,convert,carService){
+app.controller("carTableCtrl",function($scope,$http,convert,carService){
     
     // Example simple array
     // $scope.numArr=[1,2,3,4,5];

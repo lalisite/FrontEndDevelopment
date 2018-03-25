@@ -1,0 +1,54 @@
+<h1>AngularJS Templates</h1>
+        <div ng-controller="carTableCtrl">
+            <!-- <ul>
+           <li ng-repeat="num in numArr">
+               {{num}}
+            </li>
+       </ul>
+       <button class="btn btn-primary" ng-click="add(10)">Add 10</button> -->
+            <div class="input group">
+                <label for="search">Filter: </label>
+                <!-- filter on all properties of car -->
+                <!--<input type="text" id="search" ng-model="searchText">-->
+
+                <!-- filter on brand property of car -->
+                <!--<input type="text" id="search" ng-model="searchText.brand">-->
+
+                <!-- filter on filter functions property of car -->
+                <input type="text" id="search" ng-model="searchText">
+            </div>
+            <!-- <table class="table table-success table-striped table-hover"> -->
+            <table class="table ">
+                <thead class="thead-dark">
+                    <tr>
+                        <th ng-click="changeSort('brand')">Brand</th>
+                        <th ng-click="changeSort('model')">Model</th>
+                        <th ng-click="changeSort('year')">Year</th>
+                        <th ng-click="changeSort('km')">Kilomemter</th>
+                        <th>Km Per Year</th>
+                        <th>Miles</th>
+                        <th ng-click="changeSort('testDate')">Test Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- used for simple filtering -->
+                    <!--<tr ng-repeat="car in cars | filter: searchText">-->
+                    <!-- <tr ng-repeat="car in cars | filter: filterCar | orderBy : sortProp"  ng-class="{selected : car.selected}" ng-show="car.kmPerYear() > 18000" ng-click="toggleCarSelected(car)">                   -->
+                    <tr ng-repeat="car in cars | filter: filterCar | orderBy : sortProp" ng-class="{selected : car.selected}" ng-click="toggleCarSelected(car)">
+                        <td>{{car.brand}}</td>
+                        <td>{{car.model}}</td>
+                        <td>{{car.year}}</td>
+                        <td>{{car.km | number}}</td>
+                        <td>{{car.kmPerYear() | number}}</td>
+                        <td>{{car.mile | number}}</td>
+                        <td>{{car.testDate| date}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button ng-click="addCar('BMW','X6',2016,5300,'06-04-2018')">Add Car</button>
+            <button ng-click="updateCar()">Update Car</button>
+
+            <img ng-src="{{imageUrl}}">
+        </div>
+    </div>

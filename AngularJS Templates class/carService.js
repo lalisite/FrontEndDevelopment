@@ -18,6 +18,11 @@ app.factory("carService", function ($log, $http, $q) {
 
     // loads cars to the cars array async
     function load() {
+
+        //i could have called the following code:
+        // return  $http.get("cars.json")
+        // but then i loose all the service logic and data manipulation, and furthermore the controller which will // call the load will not know when the load ends.
+
         var async = $q.defer();
 
         if(wasEverLoaded){
