@@ -24,6 +24,7 @@
     <script src="app.js"></script>
     <script src="ctrl.js"></script>
     <script src="convertService.js"></script>
+    <script src="carService.js"></script>
 
 </head>
 
@@ -64,7 +65,8 @@
                 <tbody>
                     <!-- used for simple filtering -->
                     <!--<tr ng-repeat="car in cars | filter: searchText">-->
-                    <tr ng-repeat="car in cars | filter: filterCar | orderBy : sortProp" ng-show="car.kmPerYear() > 18000" ng-class="{selected : car.selected}" ng-click="toggleCarSelected(car)">                  
+                    <!-- <tr ng-repeat="car in cars | filter: filterCar | orderBy : sortProp"  ng-class="{selected : car.selected}" ng-show="car.kmPerYear() > 18000" ng-click="toggleCarSelected(car)">                   -->
+                    <tr ng-repeat="car in cars | filter: filterCar | orderBy : sortProp" ng-class="{selected : car.selected}" ng-click="toggleCarSelected(car)">
                         <td>{{car.brand}}</td>
                         <td>{{car.model}}</td>
                         <td>{{car.year}}</td>

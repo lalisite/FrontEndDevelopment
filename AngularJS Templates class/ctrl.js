@@ -1,6 +1,6 @@
 //@ts-check
 
-app.controller("ctrl",function($scope,$http,convert){
+app.controller("ctrl",function($scope,$http,convert,carService){
     
     // Example simple array
     // $scope.numArr=[1,2,3,4,5];
@@ -9,18 +9,12 @@ app.controller("ctrl",function($scope,$http,convert){
     // };
 
     // This ctor should later be a service
-    function Car(brand,model,year,km,testDate){
-        this.brand= brand;
-        this.model = model;
-        this.year = year;
-        this.km = km;
-        this.mile = convert.distance(this.km,"KM","MILE");//Math.round(convert.km2Mile(km));
-        this.testDate = new Date(testDate);
-        this.selected = false;
-        this.kmPerYear = function(){
-            return Math.round(this.km/ (new Date().getFullYear() - this.year));
-        };        
-    }
+
+    //putting the service on the $scope
+    $scope.convert =convert;
+
+
+   
 
     // Testing the ctor
     // var car1 = new Car("Toyota","Corola",2012,130000);
@@ -35,22 +29,17 @@ app.controller("ctrl",function($scope,$http,convert){
     //putting an object array on the scope
     // $scope.cars = [car1,car2,car3];
 
+    //loads from json
     $scope.cars = [];
-    $http.get("cars.json").then(function(response){
-        //on sucesss
-        //$scope.cars = response.data;
-         for(var i=0;i<response.data.length;i++){
-             $scope.cars.push(new Car(response.data[i].brand,response.data[i].model,response.data[i].year,response.data[i].km,response.data[i].testDate));
-         }
 
-    },function(response){
-        //on error
-        alert("error" + response);
+    carService.load().then(function(){
+        $scope.cars = carService.cars;
     });
+    
 
+    
     $scope.addCar = function(brand,model,year,km,testDate){
-        var c = new Car(brand,model,year,km,testDate);
-        $scope.cars.push(c);
+        carService.addCar(brand,model,year,km,testDate).then();
     }
 
     //my own filter function, when i put ng-model in the html it is added automatically to the scope

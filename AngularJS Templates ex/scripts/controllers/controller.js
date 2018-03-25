@@ -1,13 +1,5 @@
-app.controller("mainController", function ($scope,$http) {
-
-    function Actor(fname, lname, imgUrl, imdbLink, birthday) {
-        this.fname = fname;
-        this.lname = lname;
-        this.imgUrl = imgUrl;
-        this.imdbLink = imdbLink;
-        this.isSelected = false;
-        this.birthday = new Date(birthday);
-    }
+app.controller("mainController", function ($scope,$http,actorService) {
+    
     $scope.actorPropertiesList = [       
         {
             'label': 'First Name',
@@ -52,16 +44,12 @@ app.controller("mainController", function ($scope,$http) {
 
     $scope.name = "";
     $scope.month = 0;
-
-    $http.get('data/actors.json').then(function(response){
-        //on success
-        for(var i=0;i<response.data.length;i++){
-            $scope.addActor(response.data[i].fname,response.data[i].lname,response.data[i].birthday,response.data[i].imgUrl,response.data[i].imdbLink);
-        }
-    },function(response){
-        alert("Error " + response);
+    
+    actorService.load().then(function(){
+        $scope.actors =actorService.actors;
+    },function(){
+        alert("Error: loading");
     });
-
 
     $scope.filterActor = function (actor) {
         // var isFnameMatch =actor.fname.match(/$scope.name/i);
@@ -78,10 +66,9 @@ app.controller("mainController", function ($scope,$http) {
     $scope.convertSelected = function(){
         $scope.selectedOrderTypeVal = ($scope.selectedOrderType == 'true');
     };
-
+    
     $scope.addActor = function(firstName,lastName,birthday,imgLink,imdbLink){
-        var a = new Actor(firstName,lastName,imgLink,imdbLink,birthday);
-        $scope.actors.push(a);
+        actorService.addActor(firstName,lastName,birthday,imgLink,imdbLink).then(function(){},function(){});
     };
 
     $scope.toggleSelected = function(actor){

@@ -9,3 +9,29 @@
     width: 300px;
     height: 250px;
 }
+
+.container-bottom{
+    background-color: #e3f2fd;
+    height : 48px;
+}
+
+i{
+    font-size:36px;
+}
+
+.bg-pallete-2018-blue{
+    background : #a2b9bc;
+}
+
+.bg-pallete-2018-brown{
+    background : #b2ad7f
+}
+
+.bg-pallete-2018-gray{
+    background:#878f99
+}
+
+.bg-pallete-2018-purple{
+    background:#6b5b95
+}
+
